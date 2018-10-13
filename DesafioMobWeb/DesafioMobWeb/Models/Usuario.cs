@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace DesafioMobWeb.Contexto
+namespace DesafioMobWeb.Models
 {
-    public class DBContext : DBContext
+    public class Usuario
     {
-        
     }
 }
