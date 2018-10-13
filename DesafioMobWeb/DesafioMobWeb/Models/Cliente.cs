@@ -25,7 +25,7 @@ namespace DesafioMobWeb.Models
 
         public string municipioCliente { get; set; }
 
-        public int CEP { get; set; }
+        public int cepCliente { get; set; }
 
     }
 }
