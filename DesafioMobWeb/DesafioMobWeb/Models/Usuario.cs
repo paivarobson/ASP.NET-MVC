@@ -7,13 +7,13 @@ namespace DesafioMobWeb.Models
 {
     public class Usuario
     {
-        public int UsuarioID { get; set; }
-        public String nomeUsuario { get; set; }
+        public int usuarioID { get; set; }
+        public string nomeUsuario { get; set; }
 
-        public String apelidoUsuario { get; set; }
+        public string apelidoUsuario { get; set; }
 
-        public String emailUsuario { get; set; }
+        public string emailUsuario { get; set; }
 
-        public String telefoneUsuario { get; set; }
+        public string telefoneUsuario { get; set; }
     }
 }
