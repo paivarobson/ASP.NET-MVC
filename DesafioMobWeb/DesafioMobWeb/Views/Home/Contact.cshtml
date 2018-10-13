@@ -2,7 +2,7 @@
     ViewBag.Title = "Contact";
 }
 
-    <h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title.</h2>
 
 
 <div class="box box-primary">
@@ -26,8 +26,46 @@
 
 <h3>@ViewBag.Message</h3>
 
+@{
+    var nomeCompleto = "";
+
+    if (IsPost)
+    {
+
+        // Recupera o valor informado
+        // no formulário
+        var nome = Request["txtNome"];
+        var sobrenome = Request["txtSobrenome"];
+
+        nomeCompleto = nome + " " + sobrenome;
+
+    }
+}
+
+<div>
+
+    <p>Digite o seu nome e sobrenome:</p>
+
+    <form action="" method="post">
+
+        <p>
+            <label for="text1">Nome:</label>
+            <input type="text" name="txtNome" />
+        </p>
+
+        <p>
+            <label for="text1">Sobrenome:</label>
+            <input type="text" name="txtSobrenome" />
+        </p>
 
 
+        <p><input type="submit" value="Enviar" /></p>
+
+    </form>
+
+    <p>Nome Completo: <b> @nomeCompleto </b></p>
+
+</div>
 
 
 
