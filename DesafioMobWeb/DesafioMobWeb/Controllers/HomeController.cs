@@ -22,7 +22,7 @@ namespace DesafioMobWeb.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Minha página de Contato";
 
             return View();
         }
