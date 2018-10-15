@@ -6,53 +6,7 @@
 
 <h3>@ViewBag.Message</h3>
 
-@using DesafioMobWeb.Models
-@model Usuario
 
-
-
-
-
-@{
-    var nomeCompleto = "";
-
-    if (IsPost)
-    {
-
-        // Recupera o valor informado
-        // no formulário
-        var nome = Request["nomeUsuario"];
-        var sobrenome = Request["apelidoUsuario"];
-
-        nomeCompleto = nome + " " + sobrenome;
-
-    }
-}
-
-<div>
-
-    <p>Digite o seu nome e apelido:</p>
-
-    <form action="" method="post">
-
-        <p>
-            Nome: @Html.TextBoxFor(x => x.nomeUsuario)
-            
-        </p>
-
-        <p>
-            Apelido: @Html.TextBoxFor(x => x.apelidoUsuario)
-
-        </p>
-
-
-        <p><input type="submit" value="Enviar" /></p>
-
-    </form>
-
-    <p>Nome Completo: <b> @nomeCompleto </b></p>
-
-</div>
 
 
 
