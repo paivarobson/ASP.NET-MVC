@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Cadastro de Usuários";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using DesafioMobWeb.Models
+@model Usuario
+
+
+
+
+
+@{
+    var nomeCompleto = "";
+
+    if (IsPost)
+    {
+
+        // Recupera o valor informado no formulário
+        var nome = Request["nomeUsuario"];
+        var sobrenome = Request["apelidoUsuario"];
+
+        nomeCompleto = nome + " " + sobrenome;
+
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+
+
+        <div>
+
+            <p>Digite o seu nome e apelido:</p>
+
+            <form action="" method="post">
+
+                <p>
+                Nome: @Html.TextBoxFor(x => x.nomeUsuario)
+                    Apelido: @Html.TextBoxFor(x => x.apelidoUsuario)
+                </p>
+                <p>
+                    E-mail: @Html.TextBoxFor(x => x.emailUsuario)
+                    Telefone: @Html.TextBoxFor(x => x.telefoneUsuario)
+                </p>
+
+                <p><input type="submit" value="Enviar" /></p>
+
+            </form>
+
+            <p>Nome Completo: <b> @nomeCompleto </b></p>
+
+        </div>
+
+
+
+    </div>
+</body>
+</html>

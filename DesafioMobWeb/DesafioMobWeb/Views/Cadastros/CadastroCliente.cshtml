@@ -1,56 +1,58 @@
 ﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-
     ViewBag.Title = "Cadastro de Clientes";
 }
 
 <h2>@ViewBag.Title</h2>
 
-@using DesafioMobWeb.Models
-@model Usuario
-
-
-
 
 
 @{
-    var nomeCompleto = "";
+
+    var razaoCliente = "";
+    var fantasiaCliente = "";
 
     if (IsPost)
     {
 
         // Recupera o valor informado
         // no formulário
-        var nome = Request["nomeUsuario"];
-        var sobrenome = Request["apelidoUsuario"];
+        var razao = Request["razaoSocialCliente"];
+        var fantasia = Request["fantasiaCliente"];
 
-        nomeCompleto = nome + " " + sobrenome;
+        razaoCliente = razao;
+        fantasiaCliente = fantasia;
 
     }
 }
 
+@using DesafioMobWeb.Models
+@model Cliente
+
 <div>
 
-    <p>Digite o seu nome e apelido:</p>
+    <p>Digite a razão Social e nome Fantasia:</p>
 
     <form action="" method="post">
 
+        <p>Razão Social: @Html.TextBoxFor(x => x.razaoSocialCliente)</p>
+        <p>Fantasia: @Html.TextBoxFor(x => x.fantasiaCliente)</p>
+        <p>CNPJ: @Html.TextBoxFor(x => x.cnpjCliente)</p>
         <p>
-            Nome: @Html.TextBoxFor(x => x.nomeUsuario)
-
+            Endereço: @Html.TextBoxFor(x => x.ruaCliente)
+            Número: @Html.TextBoxFor(x => x.numeroRuaCliente)
+            Complemento: @Html.TextBoxFor(x => x.complementoCliente)
         </p>
-
-        <p>
-            Apelido: @Html.TextBoxFor(x => x.apelidoUsuario)
-
+            Bairro: @Html.TextBoxFor(x => x.bairroCliente)
+            Município: @Html.TextBoxFor(x => x.municipioCliente)
+            CEP: @Html.TextBoxFor(x => x.cepCliente)
         </p>
-
 
         <p><input type="submit" value="Enviar" /></p>
 
     </form>
 
-    <p>Nome Completo: <b> @nomeCompleto </b></p>
+    <p>Razão Social: <b> @razaoCliente </b></p>
+    <p>Fantasia: <b> @fantasiaCliente </b></p>
 
 </div>
 
