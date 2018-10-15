@@ -28,6 +28,7 @@
 
     <p>Digite a razão Social e nome Fantasia:</p>
 
+    <!--Exibindo os dados de entrada-->
     <br>@Model.clienteID
     <br>@Model.razaoSocialCliente
     <br>@Model.fantasiaCliente
@@ -41,22 +42,52 @@
 
     <br></br>
 
+    <!--Formulário de cadastro-->
     <form action="" method="post">
 
-        <p>Razão Social: @Html.TextBoxFor(x => x.razaoSocialCliente)</p>
-        <p>Fantasia: @Html.TextBoxFor(x => x.fantasiaCliente)</p>
-        <p>CNPJ: @Html.TextBoxFor(x => x.cnpjCliente)</p>
-        <p>
-            Endereço: @Html.TextBoxFor(x => x.ruaCliente)
-            Número: @Html.TextBoxFor(x => x.numeroRuaCliente)
-            Complemento: @Html.TextBoxFor(x => x.complementoCliente)
-        </p>
-        Bairro: @Html.TextBoxFor(x => x.bairroCliente)
-        Município: @Html.TextBoxFor(x => x.municipioCliente)
-        CEP: @Html.TextBoxFor(x => x.cepCliente)
-        </p>
 
-        <p><input type="submit" value="Enviar" /></p>
+
+        @Html.LabelFor(model => model.fantasiaCliente)
+        @Html.LabelFor(model => model.cnpjCliente)
+        @Html.LabelFor(model => model.razaoSocialCliente)
+
+        <!--### FORMULÁRIO CADASTRO DE CLIENTES ###-->
+
+        <!--Código-->
+        <div>
+            @Html.LabelFor(model => model.clienteID)
+        </div>
+        <div>
+            @Html.EditorFor(x => x.clienteID)
+        </div>
+
+        <!--Razão Social-->
+        <div>
+            @Html.LabelFor(model => model.razaoSocialCliente)
+        </div>
+        <div>
+            @Html.EditorFor(x => x.razaoSocialCliente)
+        </div>
+
+        <!--CNPJ-->
+        <div>@Html.LabelFor(model => model.cnpjCliente) @Html.EditorFor(x => x.cnpjCliente)</div>
+
+        <!--Endereço-->
+        <div>
+            @Html.LabelFor(model => model.ruaCliente) @Html.EditorFor(x => x.ruaCliente)
+            @Html.LabelFor(model => model.numeroRuaCliente) @Html.EditorFor(x => x.numeroRuaCliente)
+            @Html.LabelFor(model => model.complementoCliente) @Html.EditorFor(x => x.complementoCliente)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.bairroCliente) @Html.EditorFor(x => x.bairroCliente)
+            @Html.LabelFor(model => model.municipioCliente) @Html.EditorFor(x => x.municipioCliente)
+            @Html.LabelFor(model => model.cepCliente) @Html.EditorFor(x => x.cepCliente)
+
+        </div>
+
+        <!--Botão de Cadastro-->
+        
+        <p><input type="submit" value="Cadastrar" /></p>
 
 
     </form>
