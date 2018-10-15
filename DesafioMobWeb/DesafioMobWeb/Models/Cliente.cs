@@ -20,7 +20,7 @@
 
         public string municipioCliente { get; set; }
 
-        public int cepCliente { get; set; }
+        public string cepCliente { get; set; }
 
     }
 }

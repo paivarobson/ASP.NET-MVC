@@ -1,17 +1,9 @@
-﻿@{
-    ViewBag.Title = "Cadastro de Usuários";
-}
-
-<h2>@ViewBag.Title</h2>
-
-@using DesafioMobWeb.Models
+﻿@using DesafioMobWeb.Models
 @model Usuario
 
-
-
-
-
 @{
+    ViewBag.Title = "Cadastro de Usuários";
+
     var nomeCompleto = "";
 
     if (IsPost)
@@ -25,6 +17,8 @@
 
     }
 }
+
+<h2>@ViewBag.Title</h2>
 
 <!DOCTYPE html>
 
@@ -44,7 +38,7 @@
             <form action="" method="post">
 
                 <p>
-                Nome: @Html.TextBoxFor(x => x.nomeUsuario)
+                    Nome: @Html.TextBoxFor(x => x.nomeUsuario)
                     Apelido: @Html.TextBoxFor(x => x.apelidoUsuario)
                 </p>
                 <p>

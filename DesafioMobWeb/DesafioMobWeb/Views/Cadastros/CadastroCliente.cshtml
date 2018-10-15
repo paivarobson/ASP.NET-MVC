@@ -1,12 +1,8 @@
-﻿@{
-    ViewBag.Title = "Cadastro de Clientes";
-}
-
-<h2>@ViewBag.Title</h2>
-
-
+﻿@using DesafioMobWeb.Models
+@model Cliente
 
 @{
+    ViewBag.Title = "Cadastro de Clientes";
 
     var razaoCliente = "";
     var fantasiaCliente = "";
@@ -25,12 +21,25 @@
     }
 }
 
-@using DesafioMobWeb.Models
-@model Cliente
+<h2>@ViewBag.Title</h2>
+
 
 <div>
 
     <p>Digite a razão Social e nome Fantasia:</p>
+
+    <br>@Model.clienteID
+    <br>@Model.razaoSocialCliente
+    <br>@Model.fantasiaCliente
+    <br>@Model.cnpjCliente
+    <br>@Model.ruaCliente
+    <br>@Model.numeroRuaCliente
+    <br>@Model.complementoCliente
+    <br>@Model.bairroCliente
+    <br>@Model.municipioCliente
+    <br>@Model.cepCliente
+
+    <br></br>
 
     <form action="" method="post">
 
@@ -42,12 +51,13 @@
             Número: @Html.TextBoxFor(x => x.numeroRuaCliente)
             Complemento: @Html.TextBoxFor(x => x.complementoCliente)
         </p>
-            Bairro: @Html.TextBoxFor(x => x.bairroCliente)
-            Município: @Html.TextBoxFor(x => x.municipioCliente)
-            CEP: @Html.TextBoxFor(x => x.cepCliente)
+        Bairro: @Html.TextBoxFor(x => x.bairroCliente)
+        Município: @Html.TextBoxFor(x => x.municipioCliente)
+        CEP: @Html.TextBoxFor(x => x.cepCliente)
         </p>
 
         <p><input type="submit" value="Enviar" /></p>
+
 
     </form>
 
