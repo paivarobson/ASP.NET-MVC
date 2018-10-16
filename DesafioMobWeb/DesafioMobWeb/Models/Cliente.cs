@@ -4,23 +4,23 @@
     {
         public int clienteID { get; set; }
 
-        public string razaoSocialCliente { get; set; }
+        public string RazaoSocialCliente { get; set; }
 
-        public string fantasiaCliente { get; set; }
+        public string FantasiaCliente { get; set; }
 
-        public string cnpjCliente { get; set; }
+        public string CnpjCliente { get; set; }
 
-        public string ruaCliente { get; set; }
+        public string RuaCliente { get; set; }
 
-        public int numeroRuaCliente { get; set; }
+        public int NumeroRuaCliente { get; set; }
 
-        public string bairroCliente { get; set; }
+        public string BairroCliente { get; set; }
 
-        public string complementoCliente { get; set; }
+        public string ComplementoCliente { get; set; }
 
-        public string municipioCliente { get; set; }
+        public string MunicipioCliente { get; set; }
 
-        public string cepCliente { get; set; }
+        public string CepCliente { get; set; }
 
     }
 }

@@ -1,0 +1,96 @@
+﻿@using DesafioMobWeb.Models
+@model Cliente
+
+@{
+    ViewBag.Title = "Cadastro de Clientes";
+
+    var razaoCliente = "";
+    var fantasiaCliente = "";
+
+    if (IsPost)
+    {
+
+        // Recupera o valor informado
+        // no formulário
+        var razao = Request["RazaoSocialCliente"];
+        var fantasia = Request["FantasiaCliente"];
+
+        razaoCliente = razao;
+        fantasiaCliente = fantasia;
+
+    }
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+<div>
+
+    <p>Digite a razão Social e nome Fantasia:</p>
+
+
+    <!--Formulário de cadastro-->
+    <form action="" method="post">
+
+        <!--### FORMULÁRIO CADASTRO DE CLIENTES ###-->
+        <!--Código-->
+        <div>
+            @Html.LabelFor(model => model.clienteID)
+        </div>
+        <div>
+            @Html.EditorFor(x => x.clienteID)
+        </div>
+
+        <!--Razão Social-->
+        <div>
+            @Html.LabelFor(model => model.RazaoSocialCliente)
+        </div>
+        <div>
+            @Html.EditorFor(x => x.RazaoSocialCliente)
+        </div>
+
+        <!--CNPJ-->
+        <div>
+            @Html.LabelFor(model => model.CnpjCliente)
+        <div>
+            @Html.EditorFor(x => x.CnpjCliente)
+        </div>
+    </div>
+
+    <!--Endereço-->
+    <div>
+        @Html.LabelFor(model => model.RuaCliente)
+        <div>
+            @Html.EditorFor(x => x.RuaCliente)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.NumeroRuaCliente)
+            <div>
+                @Html.EditorFor(x => x.NumeroRuaCliente)
+            </div>
+        </div>
+        <div>
+            @Html.LabelFor(model => model.ComplementoCliente)
+            <div>
+                @Html.EditorFor(x => x.ComplementoCliente)
+            </div>
+        </div>
+    </div>
+    <div>
+        @Html.LabelFor(model => model.BairroCliente) @Html.EditorFor(x => x.BairroCliente)
+        @Html.LabelFor(model => model.MunicipioCliente) @Html.EditorFor(x => x.MunicipioCliente)
+        @Html.LabelFor(model => model.CepCliente) @Html.EditorFor(x => x.CepCliente)
+
+    </div>
+
+    <!--###    FIM    ### FORMULÁRIO CADASTRO DE CLIENTES ###-->
+    <!--Botão Cadastrar-->
+
+    <p><input type="submit" value="Cadastrar" /></p>
+
+
+    </form>
+
+    </div>
+
+

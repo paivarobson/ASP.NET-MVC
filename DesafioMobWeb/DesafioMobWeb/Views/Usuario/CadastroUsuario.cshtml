@@ -10,8 +10,8 @@
     {
 
         // Recupera o valor informado no formulário
-        var nome = Request["nomeUsuario"];
-        var sobrenome = Request["apelidoUsuario"];
+        var nome = Request["NomeUsuario"];
+        var sobrenome = Request["ApelidoUsuario"];
 
         nomeCompleto = nome + " " + sobrenome;
 
@@ -26,11 +26,11 @@
         <legend>Dados do Usuário</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(x => x.nomeUsuario)
+            @Html.LabelFor(x => x.NomeUsuario)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(x => x.nomeUsuario)
-            @Html.ValidationMessageFor(x => x.nomeUsuario)
+            @Html.EditorFor(x => x.NomeUsuario)
+            @Html.ValidationMessageFor(x => x.NomeUsuario)
         </div>
     </fieldset>
 }
@@ -55,12 +55,12 @@
             <form action="" method="post">
 
                 <p>
-                    Nome: @Html.TextBoxFor(x => x.nomeUsuario)
-                    Apelido: @Html.TextBoxFor(x => x.apelidoUsuario)
+                    Nome: @Html.TextBoxFor(x => x.NomeUsuario)
+                    Apelido: @Html.TextBoxFor(x => x.ApelidoUsuario)
                 </p>
                 <p>
-                    E-mail: @Html.TextBoxFor(x => x.emailUsuario)
-                    Telefone: @Html.TextBoxFor(x => x.telefoneUsuario)
+                    E-mail: @Html.TextBoxFor(x => x.EmailUsuario)
+                    Telefone: @Html.TextBoxFor(x => x.TelefoneUsuario)
                 </p>
 
                 <p><input type="submit" value="Enviar" /></p>

@@ -2,18 +2,18 @@
 {
     public class Usuario
     {
-        public int usuarioID { get; set; }
+        public int UsuarioID { get; set; }
 
-        public string nomeUsuario { get; set; }
+        public string NomeUsuario { get; set; }
 
-        public string apelidoUsuario { get; set; }
+        public string ApelidoUsuario { get; set; }
 
-        private string senhaUsuario { get; set; }
+        private string SenhaUsuario { get; set; }
 
-        private string confirmarSenha { get; set; }
+        private string ConfirmarSenha { get; set; }
 
-        public string emailUsuario { get; set; }
+        public string EmailUsuario { get; set; }
 
-        public string telefoneUsuario { get; set; }
+        public string TelefoneUsuario { get; set; }
     }
 }

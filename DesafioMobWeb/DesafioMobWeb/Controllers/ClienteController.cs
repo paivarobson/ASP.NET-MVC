@@ -1,5 +1,5 @@
-﻿using System.Web.Mvc;
-using DesafioMobWeb.Models;
+﻿using DesafioMobWeb.Models;
+using System.Web.Mvc;
 
 namespace DesafioMobWeb.Controllers
 {
@@ -10,15 +10,15 @@ namespace DesafioMobWeb.Controllers
             var cliente = new Cliente
             {
                 clienteID = 1,
-                razaoSocialCliente = "Robson Paiva Consultoria",
-                fantasiaCliente = "Consultoria SystemsPaiva",
-                cnpjCliente = "99.999.999/0001-01",
-                ruaCliente = "Rua",
-                numeroRuaCliente = 99,
-                complementoCliente = "Sem complemento",
-                bairroCliente = "Bairro",
-                municipioCliente = "Cidade",
-                cepCliente = "60000-000"
+                RazaoSocialCliente = "Robson Paiva Consultoria",
+                FantasiaCliente = "Consultoria SystemsPaiva",
+                CnpjCliente = "99.999.999/0001-01",
+                RuaCliente = "Rua",
+                NumeroRuaCliente = 99,
+                ComplementoCliente = "Sem complemento",
+                BairroCliente = "Bairro",
+                MunicipioCliente = "Cidade",
+                CepCliente = "60000-000"
             };
 
             return View(cliente);
