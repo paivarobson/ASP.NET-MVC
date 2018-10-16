@@ -156,7 +156,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Contexto\ContextoDB.cs" />
     <Compile Include="Controllers\CadastrosController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1131,9 +1133,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Cadastros\CadastroCliente.cshtml" />
     <Content Include="Views\Cadastros\CadastroUsuario.cshtml" />
+    <Content Include="Views\Cadastros\ResultadoUsuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Cliente\" />
+    <Folder Include="Views\Usuario\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
