@@ -17,7 +17,7 @@ namespace DesafioMobWeb.Controllers
         {
             if (ModelState.IsValid)
             {
-                return View("Resultado", usuario);
+                return View("ResultadoUsuario", usuario);
             }
 
             return View(usuario);

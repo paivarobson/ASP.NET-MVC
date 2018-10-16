@@ -1,7 +1,43 @@
-﻿
+﻿@model DesafioMobWeb.Models.Usuario
+
 @{
-    ViewBag.Title = "ResultadoUsuario";
+    ViewBag.Title = "Resultado Usuários";
 }
 
-<h2>ResultadoUsuario</h2>
+<h2>Listar Dados de Usuários</h2>
 
+<fieldset>
+    <legend>Usuário Cadastrado</legend>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(x => x.NomeUsuario)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(x => x.NomeUsuario)
+    </div>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(x => x.ApelidoUsuario)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(x => x.ApelidoUsuario)
+    </div>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(x => x.EmailUsuario)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(x => x.EmailUsuario)
+    </div>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(x => x.TelefoneUsuario)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(x => x.TelefoneUsuario)
+    </div>
+
+    <p>@Html.ActionLink("Voltar", "CadastroUsuario")</p>
+
+
+</fieldset>

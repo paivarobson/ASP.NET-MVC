@@ -1,5 +1,4 @@
-﻿@using DesafioMobWeb.Models
-@model Usuario
+﻿@model DesafioMobWeb.Models.Usuario
 
 @{
     ViewBag.Title = "Cadastro de Usuários";
@@ -24,7 +23,8 @@
     @Html.ValidationSummary(true)
     <fieldset>
         <legend>Dados do Usuário</legend>
-
+        <!--### FORMULÁRIO CADASTRO DE USUÁRIOS ###-->
+        <!--Nome-->
         <div class="editor-label">
             @Html.LabelFor(x => x.NomeUsuario)
         </div>
@@ -32,7 +32,55 @@
             @Html.EditorFor(x => x.NomeUsuario)
             @Html.ValidationMessageFor(x => x.NomeUsuario)
         </div>
+        <!--Apelido-->
+        <div class="editor-label">
+            @Html.LabelFor(x => x.ApelidoUsuario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(x => x.ApelidoUsuario)
+            @Html.ValidationMessageFor(x => x.ApelidoUsuario)
+        </div>
+        <!--Senha-->
+        <div class="editor-label">
+            @Html.LabelFor(x => x.SenhaUsuario)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(x => x.SenhaUsuario)
+            @Html.ValidationMessageFor(x => x.SenhaUsuario)
+        </div>
+        <!--Confirmar Senha-->
+        <div class="editor-label">
+            @Html.LabelFor(x => x.ConfirmarSenhaUsuario)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(x => x.ConfirmarSenhaUsuario)
+            @Html.ValidationMessageFor(x => x.ConfirmarSenhaUsuario)
+        </div>
+        <!--Email-->
+        <div class="editor-label">
+            @Html.LabelFor(x => x.EmailUsuario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(x => x.EmailUsuario)
+            @Html.ValidationMessageFor(x => x.EmailUsuario)
+        </div>
+        <!--Telefone-->
+        <div class="editor-label">
+            @Html.LabelFor(x => x.TelefoneUsuario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(x => x.TelefoneUsuario)
+            @Html.ValidationMessageFor(x => x.TelefoneUsuario)
+        </div>
+
+        <p><input type="submit" value="Cadastrar"/></p>
+
     </fieldset>
+
+    @section Scripts
+    {
+        @Scripts.Render("~/budles/jqueryval");
+    }
 }
 
 <h2>@ViewBag.Title</h2>

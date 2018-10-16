@@ -9,7 +9,7 @@ namespace DesafioMobWeb.Controllers
         {
             var cliente = new Cliente
             {
-                clienteID = 1,
+                ClienteID = 1,
                 RazaoSocialCliente = "Robson Paiva Consultoria",
                 FantasiaCliente = "Consultoria SystemsPaiva",
                 CnpjCliente = "99.999.999/0001-01",
