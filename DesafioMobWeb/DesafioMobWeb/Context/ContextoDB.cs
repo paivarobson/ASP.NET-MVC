@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace DesafioMobWeb.Contexto
+namespace DesafioMobWeb.Context
 {
     public class ContextoDB : DbContext
     {

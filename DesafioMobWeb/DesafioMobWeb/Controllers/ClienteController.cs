@@ -5,7 +5,7 @@ namespace DesafioMobWeb.Controllers
 {
     public class ClienteController : Controller
     {
-        public ActionResult CadastroCliente()
+        public ActionResult Cliente()
         {
             var cliente = new Cliente
             {
@@ -22,6 +22,21 @@ namespace DesafioMobWeb.Controllers
             };
 
             return View(cliente);
+        }
+
+        public ActionResult Criar()
+        {
+            return View();
+        }
+
+        public ActionResult Detalhes(int id)
+        {
+            return View();
+        }
+
+        public ActionResult Editar(int id)
+        {
+            return View();
         }
     }
 }
