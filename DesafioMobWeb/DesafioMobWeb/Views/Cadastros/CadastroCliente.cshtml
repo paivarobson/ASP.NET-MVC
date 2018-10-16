@@ -28,9 +28,28 @@
 
     <p>Digite a razão Social e nome Fantasia:</p>
 
+    <!--Exibindo os dados de entrada-->
+    <br>@Model.clienteID
+    <br>@Model.razaoSocialCliente
+    <br>@Model.fantasiaCliente
+    <br>@Model.cnpjCliente
+    <br>@Model.ruaCliente
+    <br>@Model.numeroRuaCliente
+    <br>@Model.complementoCliente
+    <br>@Model.bairroCliente
+    <br>@Model.municipioCliente
+    <br>@Model.cepCliente
+
+    <br></br>
 
     <!--Formulário de cadastro-->
     <form action="" method="post">
+
+
+
+        @Html.LabelFor(model => model.fantasiaCliente)
+        @Html.LabelFor(model => model.cnpjCliente)
+        @Html.LabelFor(model => model.razaoSocialCliente)
 
         <!--### FORMULÁRIO CADASTRO DE CLIENTES ###-->
 
@@ -51,30 +70,13 @@
         </div>
 
         <!--CNPJ-->
-        <div>@Html.LabelFor(model => model.cnpjCliente) 
-            <div>
-                @Html.EditorFor(x => x.cnpjCliente)
-            </div>
-        </div>
+        <div>@Html.LabelFor(model => model.cnpjCliente) @Html.EditorFor(x => x.cnpjCliente)</div>
 
         <!--Endereço-->
         <div>
-            @Html.LabelFor(model => model.ruaCliente) 
-            <div>
-                @Html.EditorFor(x => x.ruaCliente)
-            </div>
-            <div>
-                @Html.LabelFor(model => model.numeroRuaCliente)
-                <div>
-                    @Html.EditorFor(x => x.numeroRuaCliente)
-                </div>
-            </div>
-            <div>
-                @Html.LabelFor(model => model.complementoCliente)
-                <div>
-                    @Html.EditorFor(x => x.complementoCliente)
-                </div>
-            </div>
+            @Html.LabelFor(model => model.ruaCliente) @Html.EditorFor(x => x.ruaCliente)
+            @Html.LabelFor(model => model.numeroRuaCliente) @Html.EditorFor(x => x.numeroRuaCliente)
+            @Html.LabelFor(model => model.complementoCliente) @Html.EditorFor(x => x.complementoCliente)
         </div>
         <div>
             @Html.LabelFor(model => model.bairroCliente) @Html.EditorFor(x => x.bairroCliente)
@@ -83,13 +85,16 @@
 
         </div>
 
-        <!--Botão Cadastrar-->
+        <!--Botão de Cadastro-->
         
         <p><input type="submit" value="Cadastrar" /></p>
 
 
     </form>
 
-    </div>
+    <p>Razão Social: <b> @razaoCliente </b></p>
+    <p>Fantasia: <b> @fantasiaCliente </b></p>
+
+</div>
 
 
