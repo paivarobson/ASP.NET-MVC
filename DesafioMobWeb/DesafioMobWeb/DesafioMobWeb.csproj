@@ -1131,7 +1131,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Cliente\Cliente.cshtml" />
     <Content Include="Views\Usuario\Usuario.cshtml" />
     <Content Include="Views\Usuario\ResultadoUsuario.cshtml" />
     <Content Include="Views\Usuario\Detalhes.cshtml" />
