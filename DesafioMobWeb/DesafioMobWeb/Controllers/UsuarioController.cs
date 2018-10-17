@@ -1,14 +1,22 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
+using DesafioMobWeb.Context;
 using DesafioMobWeb.Models;
 
 namespace DesafioMobWeb.Controllers
 {
     public class UsuarioController : Controller
     {
+        private ContextoDB db = new ContextoDB();
+
+        public ActionResult Index()
+        {
+
+            return View(db.Usuarios.ToList());
+        }
+
         public ActionResult Usuario()
         {
-            var usuario = new Usuario();
-
             return View();
         }
 

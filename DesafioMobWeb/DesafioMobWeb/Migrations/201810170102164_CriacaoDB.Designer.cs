@@ -7,13 +7,13 @@ namespace DesafioMobWeb.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class CriacaoBD : IMigrationMetadata
+    public sealed partial class CriacaoDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CriacaoBD));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CriacaoDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "201810131718155_CriacaoBD"; }
+            get { return "201810170102164_CriacaoDB"; }
         }
         
         string IMigrationMetadata.Source

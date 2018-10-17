@@ -161,9 +161,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810131718155_CriacaoBD.cs" />
-    <Compile Include="Migrations\201810131718155_CriacaoBD.Designer.cs">
-      <DependentUpon>201810131718155_CriacaoBD.cs</DependentUpon>
+    <Compile Include="Migrations\201810170102164_CriacaoDB.cs" />
+    <Compile Include="Migrations\201810170102164_CriacaoDB.Designer.cs">
+      <DependentUpon>201810170102164_CriacaoDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cliente.cs" />
@@ -1139,6 +1139,7 @@
     <Content Include="Views\Cliente\Criar.cshtml" />
     <Content Include="Views\Cliente\Detalhes.cshtml" />
     <Content Include="Views\Cliente\Editar.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1157,8 +1158,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810131718155_CriacaoBD.resx">
-      <DependentUpon>201810131718155_CriacaoBD.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810170102164_CriacaoDB.resx">
+      <DependentUpon>201810170102164_CriacaoDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
