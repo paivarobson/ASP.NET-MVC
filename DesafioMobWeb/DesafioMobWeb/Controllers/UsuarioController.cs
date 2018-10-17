@@ -12,11 +12,14 @@ namespace DesafioMobWeb.Controllers
 
         private ContextoDB db = new ContextoDB();
 
+        //Método para retornar View 
+        //para entrada de dados de cadastro do Usuário
         public ActionResult Cadastrar()
         {
             return View();
         }
 
+        //Gravar dados de cadastro do BD
         [HttpPost]
         public ActionResult Cadastrar(Usuario usuario)
         {
@@ -34,7 +37,7 @@ namespace DesafioMobWeb.Controllers
             
         }
 
-        //Método para Consulta de Usuários
+        //Consulta de Usuários cadastrados
         public ActionResult Consultar()
         {
 
@@ -49,12 +52,14 @@ namespace DesafioMobWeb.Controllers
             return View(usuario);
         }
 
+        //Retorno da View de edição do Cliente selecionado
         public ActionResult Editar(int id)
         {
 
             return View(db.Usuarios.Find(id));
         }
 
+        //Modificar dados de Usuários cadastrados
         [HttpPost]
         public ActionResult Editar(Usuario usuario)
         {
@@ -64,6 +69,7 @@ namespace DesafioMobWeb.Controllers
                 {
                     db.Entry(usuario).State = EntityState.Modified;
                     db.SaveChanges();
+
                     return RedirectToAction("Consultar");
                 }
 
@@ -75,6 +81,11 @@ namespace DesafioMobWeb.Controllers
             }
 
         }
+
+
+
+
+
 
         [HttpPost]
         public ActionResult Usuario(Usuario usuario)

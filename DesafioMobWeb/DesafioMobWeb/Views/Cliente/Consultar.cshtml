@@ -47,33 +47,38 @@
     @foreach (var cliente in Model)
     {
         <tr>
-            <th>
+            <td>
                 @Html.DisplayFor(x => cliente.RazaoSocialCliente)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(x => cliente.FantasiaCliente)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(x => cliente.CnpjCliente)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(x => cliente.RuaCliente)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(x => cliente.NumeroRuaCliente)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(x => cliente.ComplementoCliente)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(x => cliente.BairroCliente)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(x => cliente.MunicipioCliente)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(x => cliente.CepCliente)
-            </th>
+            </td>
+            <td>
+                @Html.ActionLink("Visualizar", "Consultar", new { id = cliente.ClienteID})
+                @Html.ActionLink("Editar", "Editar", new { id = cliente.ClienteID })
+                @Html.ActionLink("Excluir", "Excluir", new { id = cliente.ClienteID })
+            </td>
         </tr>
     }
 </table>

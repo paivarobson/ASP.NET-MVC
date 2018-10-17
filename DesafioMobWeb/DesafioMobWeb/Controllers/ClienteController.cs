@@ -1,5 +1,6 @@
 ﻿using DesafioMobWeb.Context;
 using DesafioMobWeb.Models;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -23,11 +24,14 @@ namespace DesafioMobWeb.Controllers
             CepCliente = "60000-000"
         };
 
+        //Método para retornar View 
+        //para entrada de dados de cadastro do Cliente
         public ActionResult Cadastrar()
         {
             return View(insercaoDeDadosCliente);
         }
 
+        //Gravar dados de cadastro do BD
         [HttpPost]
         public ActionResult Cadastrar(Cliente cli)
         {
@@ -44,14 +48,46 @@ namespace DesafioMobWeb.Controllers
             }
         }
 
+        //Consulta de Clientes cadastrados
         public ActionResult Consultar()
         {
             return View(db.Clientes.ToList());
         }
 
+
+        public ActionResult Detalhes(int id)
+        {
+            return View(db.Usuarios.Find(id));
+        }
+
+        //Retorno da View de edição do Cliente selecionado
         public ActionResult Editar(int id)
         {
-            return View();
+            return View(db.Clientes.Find(id));
         }
+
+        //Modificar dados de Clientes cadastrados
+        [HttpPost]
+        public ActionResult Editar(Cliente cliente)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Entry(cliente).State = EntityState.Modified;
+                    db.SaveChanges();
+
+                    return RedirectToAction("Consultar");
+                }
+
+                return View(cliente);
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+
     }
 }
