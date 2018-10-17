@@ -35,6 +35,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1138,7 +1139,7 @@
     <Content Include="Views\Usuario\Editar.cshtml" />
     <Content Include="Views\Cliente\Cadastrar.cshtml" />
     <Content Include="Views\Cliente\Editar.cshtml" />
-    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Usuario\Visualizar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

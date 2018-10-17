@@ -9,7 +9,7 @@ namespace DesafioMobWeb.Controllers
     {
         private ContextoDB db = new ContextoDB();
 
-        public ActionResult Index()
+        public ActionResult Visualizar()
         {
 
             return View(db.Usuarios.ToList());
