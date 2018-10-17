@@ -57,7 +57,7 @@ namespace DesafioMobWeb.Controllers
 
         public ActionResult Detalhes(int id)
         {
-            return View(db.Usuarios.Find(id));
+            return View(db.Clientes.Find(id));
         }
 
         //Retorno da View de edição do Cliente selecionado

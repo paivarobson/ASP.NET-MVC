@@ -82,7 +82,26 @@ namespace DesafioMobWeb.Controllers
 
         }
 
+        
+        public ActionResult Excluir(Usuario usuario)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Entry(usuario).State = EntityState.Deleted;
+                    db.SaveChanges();
 
+                    return RedirectToAction("Consultar");
+                }
+
+                return View(usuario);
+            }
+            catch
+            {
+                return View();
+            }
+        }
 
 
 

@@ -1140,6 +1140,7 @@
     <Content Include="Views\Cliente\Consultar.cshtml" />
     <Content Include="Views\Usuario\Consultar.cshtml" />
     <Content Include="Views\Cliente\Detalhes.cshtml" />
+    <Content Include="Views\Usuario\Excluir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
