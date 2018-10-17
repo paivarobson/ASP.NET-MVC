@@ -15,12 +15,18 @@ namespace DesafioMobWeb.Controllers
             return View(db.Usuarios.ToList());
         }
 
+        public ActionResult Create()
+        {
+
+            return View();
+        }
+
         public ActionResult Usuario()
         {
             return View();
         }
 
-        public ActionResult Criar()
+        public ActionResult Cadastrar()
         {
             return View();
         }

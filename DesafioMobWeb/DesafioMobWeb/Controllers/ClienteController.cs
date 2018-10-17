@@ -24,12 +24,12 @@ namespace DesafioMobWeb.Controllers
             return View(cliente);
         }
 
-        public ActionResult Criar()
+        public ActionResult Cadastrar()
         {
             return View();
         }
 
-        public ActionResult Detalhes(int id)
+        public ActionResult Visualizar(int id)
         {
             return View();
         }
