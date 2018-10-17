@@ -8,7 +8,6 @@ namespace DesafioMobWeb.Controllers
 {
     public class UsuarioController : Controller
     {
-        Usuario usu = new Usuario();
 
         private ContextoDB db = new ContextoDB();
 
@@ -52,7 +51,7 @@ namespace DesafioMobWeb.Controllers
             return View(usuario);
         }
 
-        //Retorno da View de edição do Cliente selecionado
+        //Retornar dados de Usuários do BD para Edição
         public ActionResult Editar(int id)
         {
 
@@ -82,14 +81,22 @@ namespace DesafioMobWeb.Controllers
 
         }
 
-        
-        public ActionResult Excluir(Usuario usuario)
+        //Retornar dados de Usuários do BD para Exclusão
+        public ActionResult Excluir(int id)
+        {
+            return View(db.Usuarios.Find(id));
+        }
+
+        //Excluir registro de Usuário do BD
+        [HttpPost]
+        public ActionResult Excluir(int id, Usuario usuario)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    db.Entry(usuario).State = EntityState.Deleted;
+                    usuario = db.Usuarios.Find(id);
+                    db.Usuarios.Remove(usuario);
                     db.SaveChanges();
 
                     return RedirectToAction("Consultar");
@@ -103,8 +110,7 @@ namespace DesafioMobWeb.Controllers
             }
         }
 
-
-
+        ////////////////////////////////////////////////////////
 
         [HttpPost]
         public ActionResult Usuario(Usuario usuario)
