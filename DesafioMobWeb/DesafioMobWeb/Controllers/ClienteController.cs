@@ -36,7 +36,7 @@ namespace DesafioMobWeb.Controllers
                 db.Clientes.Add(cli);
                 db.SaveChanges();
 
-                return RedirectToAction("Visualizar");
+                return RedirectToAction("Consultar");
             }
             catch
             {
@@ -44,7 +44,7 @@ namespace DesafioMobWeb.Controllers
             }
         }
 
-        public ActionResult Visualizar()
+        public ActionResult Consultar()
         {
             return View(db.Clientes.ToList());
         }

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Data.Entity;
+using System.Linq;
 using System.Web.Mvc;
 using DesafioMobWeb.Context;
 using DesafioMobWeb.Models;
@@ -7,6 +8,8 @@ namespace DesafioMobWeb.Controllers
 {
     public class UsuarioController : Controller
     {
+        Usuario usu = new Usuario();
+
         private ContextoDB db = new ContextoDB();
 
         public ActionResult Cadastrar()
@@ -22,7 +25,7 @@ namespace DesafioMobWeb.Controllers
                 db.Usuarios.Add(usuario);
                 db.SaveChanges();
 
-                return RedirectToAction("Visualizar");
+                return RedirectToAction("Consultar");
             }
             catch
             {
@@ -32,7 +35,7 @@ namespace DesafioMobWeb.Controllers
         }
 
         //Método para Consulta de Usuários
-        public ActionResult Visualizar()
+        public ActionResult Consultar()
         {
 
             return View(db.Usuarios.ToList());
@@ -40,14 +43,38 @@ namespace DesafioMobWeb.Controllers
 
         public ActionResult Detalhes(int id)
         {
-            return View();
+
+            var usuario = db.Usuarios.Find(id);
+
+            return View(usuario);
         }
 
         public ActionResult Editar(int id)
         {
-            return View();
+
+            return View(db.Usuarios.Find(id));
         }
 
+        [HttpPost]
+        public ActionResult Editar(Usuario usuario)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Entry(usuario).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Consultar");
+                }
+
+                return View(usuario);
+            }   
+            catch
+            {
+                return View();
+            }
+
+        }
 
         [HttpPost]
         public ActionResult Usuario(Usuario usuario)

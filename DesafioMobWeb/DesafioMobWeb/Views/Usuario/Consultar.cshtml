@@ -6,11 +6,15 @@
 
 <h2>Consulta de Usuários</h2>
 
-<!--###   TABELA DE CONSULTA DE USUÁRIOS   ###-->    
+<!--###   TABELA DE CONSULTA DE USUÁRIOS   ###-->
 
 <p>
     @Html.ActionLink("Cadastrar Novo", "Cadastrar")
 </p>
+
+
+
+
 <table class="table">
     <!--Títulos das Colunas-->
     <tr>
@@ -32,30 +36,39 @@
         <th>
             @Html.DisplayNameFor(x => x.TelefoneUsuario)
         </th>
+        <th></th>
     </tr>
+
 
     <!--Loop para listar todos os registros do BD-->
     @foreach (var usuario in Model)
     {
         <tr>
-            <th>
+            <td>
                 @Html.DisplayFor(x => usuario.NomeUsuario)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(x => usuario.ApelidoUsuario)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(x => usuario.SenhaUsuario)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(x => usuario.ConfirmarSenhaUsuario)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(x => usuario.EmailUsuario)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayFor(x => usuario.TelefoneUsuario)
-            </th>
+            </td>
+            <td>
+                @Html.ActionLink("Visualizar", "Detalhes", new {id = usuario.UsuarioID })
+                @Html.ActionLink("Editar", "Editar", new { id = usuario.UsuarioID })
+                @Html.ActionLink("Excluir", "Excluir", new { id = usuario.UsuarioID })
+            </td>
+
         </tr>
+        
     }
 </table>
