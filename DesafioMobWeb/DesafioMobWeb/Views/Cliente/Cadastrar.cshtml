@@ -1,97 +1,99 @@
 ﻿@model DesafioMobWeb.Models.Cliente
 
 @{
-    ViewBag.Title = "Cadastrar Cliente";
+    ViewBag.Title = "Cadastrar Clientes";
 }
 
-<h2>Cadastrar Cliente</h2>
+<h2>Cadastrar Clientes</h2>
+
+@Html.ActionLink("Consultar Clientes", "Visualizar")
 
 @using (Html.BeginForm())
 {
 
-<!--### FORMULÁRIO CADASTRO DE CLIENTES ###-->
-<div class="form-horizontal">
-    <h4>Cliente</h4>
+    <!--### FORMULÁRIO CADASTRO DE CLIENTES ###-->
+    <div class="form-horizontal">
+        <h4>Cliente</h4>
 
-    <!--Razão Social-->
-    <div class="form-group">
-        @Html.LabelFor(x => x.RazaoSocialCliente, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(x => x.RazaoSocialCliente, new { htmlAttributes = new { @class = "form-control" } })
+        <!--Razão Social-->
+        <div class="form-group">
+            @Html.LabelFor(x => x.RazaoSocialCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.RazaoSocialCliente, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <!--Fantasia-->
+        <div class="form-group">
+            @Html.LabelFor(x => x.FantasiaCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.FantasiaCliente, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <!--CNPJ-->
+        <div class="form-group">
+            @Html.LabelFor(x => x.CnpjCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.CnpjCliente, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <!--Rua-->
+        <div class="form-group">
+            @Html.LabelFor(x => x.RuaCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.RuaCliente, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <!--Número da Casa-->
+        <div class="form-group">
+            @Html.LabelFor(x => x.NumeroRuaCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.NumeroRuaCliente, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <!--Complemento da Casa-->
+        <div class="form-group">
+            @Html.LabelFor(x => x.ComplementoCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.ComplementoCliente, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <!--Bairro-->
+        <div class="form-group">
+            @Html.LabelFor(x => x.BairroCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.BairroCliente, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <!--Município-->
+        <div class="form-group">
+            @Html.LabelFor(x => x.MunicipioCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.MunicipioCliente, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <!--CEP-->
+        <div class="form-group">
+            @Html.LabelFor(x => x.CepCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.CepCliente, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <!--Botão Cadastrar-->
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
+            </div>
         </div>
     </div>
-
-    <!--Fantasia-->
-    <div class="form-group">
-        @Html.LabelFor(x => x.FantasiaCliente, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(x => x.FantasiaCliente, new { htmlAttributes = new { @class = "form-control" } })
-        </div>
-    </div>
-
-    <!--CNPJ-->
-    <div class="form-group">
-        @Html.LabelFor(x => x.CnpjCliente, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(x => x.CnpjCliente, new { htmlAttributes = new { @class = "form-control" } })
-        </div>
-    </div>
-
-    <!--Rua-->
-    <div class="form-group">
-        @Html.LabelFor(x => x.RuaCliente, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(x => x.RuaCliente, new { htmlAttributes = new { @class = "form-control" } })
-        </div>
-    </div>
-
-    <!--Número da Casa-->
-    <div class="form-group">
-        @Html.LabelFor(x => x.NumeroRuaCliente, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(x => x.NumeroRuaCliente, new { htmlAttributes = new { @class = "form-control" } })
-        </div>
-    </div>
-
-    <!--Complemento da Casa-->
-    <div class="form-group">
-        @Html.LabelFor(x => x.ComplementoCliente, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(x => x.ComplementoCliente, new { htmlAttributes = new { @class = "form-control" } })
-        </div>
-    </div>
-
-    <!--Bairro-->
-    <div class="form-group">
-        @Html.LabelFor(x => x.BairroCliente, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(x => x.BairroCliente, new { htmlAttributes = new { @class = "form-control" } })
-        </div>
-    </div>
-
-    <!--Município-->
-    <div class="form-group">
-        @Html.LabelFor(x => x.MunicipioCliente, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(x => x.MunicipioCliente, new { htmlAttributes = new { @class = "form-control" } })
-        </div>
-    </div>
-
-    <!--CEP-->
-    <div class="form-group">
-        @Html.LabelFor(x => x.CepCliente, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(x => x.CepCliente, new { htmlAttributes = new { @class = "form-control" } })
-        </div>
-    </div>
-
-    <!--Botão Cadastrar-->
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Cadastrar" class="btn btn-default" />
-        </div>
-    </div>
-</div>
 
     <div>
         @Html.ActionLink("Voltar", "Cliente")

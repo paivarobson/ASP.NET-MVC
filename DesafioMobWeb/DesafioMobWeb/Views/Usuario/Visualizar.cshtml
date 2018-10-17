@@ -1,63 +1,61 @@
 ﻿@model IEnumerable<DesafioMobWeb.Models.Usuario>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Lista de Usuários";
 }
 
-<h2>Index</h2>
+<h2>Consulta de Usuários</h2>
+
+<!--###   TABELA DE CONSULTA DE USUÁRIOS   ###-->    
 
 <p>
-    @Html.ActionLink("Novo cadastro", "Criar")
+    @Html.ActionLink("Cadastrar Novo", "Cadastrar")
 </p>
 <table class="table">
+    <!--Títulos das Colunas-->
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.NomeUsuario)
+            @Html.DisplayNameFor(x => x.NomeUsuario)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ApelidoUsuario)
+            @Html.DisplayNameFor(x => x.ApelidoUsuario)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SenhaUsuario)
+            @Html.DisplayNameFor(x => x.SenhaUsuario)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ConfirmarSenhaUsuario)
+            @Html.DisplayNameFor(x => x.ConfirmarSenhaUsuario)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EmailUsuario)
+            @Html.DisplayNameFor(x => x.EmailUsuario)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TelefoneUsuario)
+            @Html.DisplayNameFor(x => x.TelefoneUsuario)
         </th>
-        <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NomeUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ApelidoUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SenhaUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ConfirmarSenhaUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EmailUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TelefoneUsuario)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Editar", new { id=item.UsuarioID }) |
-            @Html.ActionLink("Details", "Detalhes", new { id=item.UsuarioID }) |
-            
-        </td>
-    </tr>
-}
-
+    <!--Loop para listar todos os registros do BD-->
+    @foreach (var usuario in Model)
+    {
+        <tr>
+            <th>
+                @Html.DisplayFor(x => usuario.NomeUsuario)
+            </th>
+            <th>
+                @Html.DisplayFor(x => usuario.ApelidoUsuario)
+            </th>
+            <th>
+                @Html.DisplayFor(x => usuario.SenhaUsuario)
+            </th>
+            <th>
+                @Html.DisplayFor(x => usuario.ConfirmarSenhaUsuario)
+            </th>
+            <th>
+                @Html.DisplayFor(x => usuario.EmailUsuario)
+            </th>
+            <th>
+                @Html.DisplayFor(x => usuario.TelefoneUsuario)
+            </th>
+        </tr>
+    }
 </table>

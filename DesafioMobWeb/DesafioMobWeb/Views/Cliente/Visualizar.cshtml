@@ -1,0 +1,79 @@
+﻿@model IEnumerable<DesafioMobWeb.Models.Cliente>
+
+@{
+    ViewBag.Title = "Lista de Clientes";
+}
+
+<h2>Consulta de Clientes</h2>
+
+<!--###   TABELA DE CONSULTA DE CLIENTES   ###-->
+
+<p>
+    @Html.ActionLink("Cadastrar Novo", "Cadastrar")
+</p>
+<table class="table">
+    <!--Títulos das Colunas-->
+    <tr>
+        <th>
+            @Html.DisplayNameFor(x => x.RazaoSocialCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.FantasiaCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.CnpjCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.RuaCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.NumeroRuaCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.ComplementoCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.BairroCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.MunicipioCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.CepCliente)
+        </th>
+    </tr>
+
+    <!--Loop para listar todos os registros do BD-->
+    @foreach (var cliente in Model)
+    {
+        <tr>
+            <th>
+                @Html.DisplayFor(x => cliente.RazaoSocialCliente)
+            </th>
+            <th>
+                @Html.DisplayFor(x => cliente.FantasiaCliente)
+            </th>
+            <th>
+                @Html.DisplayFor(x => cliente.CnpjCliente)
+            </th>
+            <th>
+                @Html.DisplayFor(x => cliente.RuaCliente)
+            </th>
+            <th>
+                @Html.DisplayFor(x => cliente.NumeroRuaCliente)
+            </th>
+            <th>
+                @Html.DisplayFor(x => cliente.ComplementoCliente)
+            </th>
+            <th>
+                @Html.DisplayFor(x => cliente.BairroCliente)
+            </th>
+            <th>
+                @Html.DisplayFor(x => cliente.MunicipioCliente)
+            </th>
+            <th>
+                @Html.DisplayFor(x => cliente.CepCliente)
+            </th>
+        </tr>
+    }
+</table>

@@ -9,26 +9,33 @@ namespace DesafioMobWeb.Controllers
     {
         private ContextoDB db = new ContextoDB();
 
+        public ActionResult Cadastrar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Cadastrar(Usuario usuario)
+        {
+            try
+            {
+                db.Usuarios.Add(usuario);
+                db.SaveChanges();
+
+                return RedirectToAction("Visualizar");
+            }
+            catch
+            {
+                return View();
+            }
+            
+        }
+
+        //Método para Consulta de Usuários
         public ActionResult Visualizar()
         {
 
             return View(db.Usuarios.ToList());
-        }
-
-        public ActionResult Create()
-        {
-
-            return View();
-        }
-
-        public ActionResult Usuario()
-        {
-            return View();
-        }
-
-        public ActionResult Cadastrar()
-        {
-            return View();
         }
 
         public ActionResult Detalhes(int id)

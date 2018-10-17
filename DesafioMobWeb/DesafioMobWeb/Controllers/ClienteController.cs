@@ -1,5 +1,6 @@
 ﻿using DesafioMobWeb.Context;
 using DesafioMobWeb.Models;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace DesafioMobWeb.Controllers
@@ -8,7 +9,7 @@ namespace DesafioMobWeb.Controllers
     {
         public ContextoDB db = new ContextoDB();
 
-        var insercaoDeDadosCliente = new Cliente
+        Cliente insercaoDeDadosCliente = new Cliente
         {
             ClienteID = 1,
             RazaoSocialCliente = "Robson Paiva Consultoria",
@@ -21,14 +22,6 @@ namespace DesafioMobWeb.Controllers
             MunicipioCliente = "Cidade",
             CepCliente = "60000-000"
         };
-
-        public ActionResult Cliente()
-        {
-            
-
-            return View(insercaoDeDadosCliente);
-        }
-
 
         public ActionResult Cadastrar()
         {
@@ -43,7 +36,7 @@ namespace DesafioMobWeb.Controllers
                 db.Clientes.Add(cli);
                 db.SaveChanges();
 
-                return RedirectToAction("Editar");
+                return RedirectToAction("Visualizar");
             }
             catch
             {
@@ -51,9 +44,9 @@ namespace DesafioMobWeb.Controllers
             }
         }
 
-        public ActionResult Visualizar(int id)
+        public ActionResult Visualizar()
         {
-            return View();
+            return View(db.Clientes.ToList());
         }
 
         public ActionResult Editar(int id)
