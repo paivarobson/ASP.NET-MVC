@@ -25,22 +25,7 @@
         </th>
         <th>
             @Html.DisplayNameFor(x => x.RuaCliente)
-        </th>
-        <th>
-            @Html.DisplayNameFor(x => x.NumeroRuaCliente)
-        </th>
-        <th>
-            @Html.DisplayNameFor(x => x.ComplementoCliente)
-        </th>
-        <th>
-            @Html.DisplayNameFor(x => x.BairroCliente)
-        </th>
-        <th>
-            @Html.DisplayNameFor(x => x.MunicipioCliente)
-        </th>
-        <th>
-            @Html.DisplayNameFor(x => x.CepCliente)
-        </th>
+        </th>      
     </tr>
 
     <!--Loop para listar todos os registros do BD-->
@@ -57,21 +42,16 @@
             @Html.DisplayFor(x => cliente.CnpjCliente)
         </td>
         <td>
-            @Html.DisplayFor(x => cliente.RuaCliente)
-        </td>
-        <td>
+            @Html.DisplayFor(x => cliente.RuaCliente),
+ 
             @Html.DisplayFor(x => cliente.NumeroRuaCliente)
-        </td>
-        <td>
-            @Html.DisplayFor(x => cliente.ComplementoCliente)
-        </td>
-        <td>
-            @Html.DisplayFor(x => cliente.BairroCliente)
-        </td>
-        <td>
-            @Html.DisplayFor(x => cliente.MunicipioCliente)
-        </td>
-        <td>
+ 
+            @Html.DisplayFor(x => cliente.ComplementoCliente),
+
+            @Html.DisplayFor(x => cliente.BairroCliente) -
+
+            @Html.DisplayFor(x => cliente.MunicipioCliente),
+
             @Html.DisplayFor(x => cliente.CepCliente)
         </td>
         <td class="fa fa-eye">
