@@ -96,6 +96,7 @@ namespace DesafioMobWeb.Controllers
                 if (ModelState.IsValid)
                 {
                     usuario = db.Usuarios.Find(id);
+
                     db.Usuarios.Remove(usuario);
                     db.SaveChanges();
 

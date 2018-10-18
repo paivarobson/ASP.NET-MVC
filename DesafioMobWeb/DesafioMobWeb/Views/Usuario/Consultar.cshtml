@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<DesafioMobWeb.Models.Usuario>
 
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Lista de Usuários";
 }
 
@@ -41,32 +42,35 @@
     <!--Loop para listar todos os registros do BD-->
     @foreach (var usuario in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(x => usuario.NomeUsuario)
-            </td>
-            <td>
-                @Html.DisplayFor(x => usuario.ApelidoUsuario)
-            </td>
-            <td>
-                @Html.DisplayFor(x => usuario.SenhaUsuario)
-            </td>
-            <td>
-                @Html.DisplayFor(x => usuario.ConfirmarSenhaUsuario)
-            </td>
-            <td>
-                @Html.DisplayFor(x => usuario.EmailUsuario)
-            </td>
-            <td>
-                @Html.DisplayFor(x => usuario.TelefoneUsuario)
-            </td>
-            <td>
-                @Html.ActionLink("Visualizar", "Detalhes", new { id = usuario.UsuarioID })
-                @Html.ActionLink("Editar", "Editar", new { id = usuario.UsuarioID })
-                @Html.ActionLink("Excluir", "Excluir", new { id = usuario.UsuarioID })
-            </td>
-
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(x => usuario.NomeUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(x => usuario.ApelidoUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(x => usuario.SenhaUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(x => usuario.ConfirmarSenhaUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(x => usuario.EmailUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(x => usuario.TelefoneUsuario)
+        </td>
+        <td class="fa fa-eye">
+            @Html.ActionLink("Visualizar", "Detalhes", new { id = usuario.UsuarioID })
+        </td>
+        <td class="fa fa-edit">
+            @Html.ActionLink("Editar", "Editar", new { id = usuario.UsuarioID })
+        </td>
+        <td class="fa fa-trash-o">
+            @Html.ActionLink("Excluir", "Excluir", new { id = usuario.UsuarioID })
+        </td>
+    </tr>
         
     }
 </table>
