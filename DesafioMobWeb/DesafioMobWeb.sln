@@ -7,9 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioMobWeb", "DesafioMob
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modelo", "Modelo\Modelo.csproj", "{C8998B94-16AA-464D-8637-66636E9BC3F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistencia", "Persistencia\Persistencia.csproj", "{FF9DBCFB-4D55-4CB1-864C-83CEF2515165}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servico", "Servico\Servico.csproj", "{1FC3A19B-ADF7-4C1C-8052-02E0BD41272E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistencia", "Persistencia\Persistencia.csproj", "{FF9DBCFB-4D55-4CB1-864C-83CEF2515165}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{FF9DBCFB-4D55-4CB1-864C-83CEF2515165}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF9DBCFB-4D55-4CB1-864C-83CEF2515165}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF9DBCFB-4D55-4CB1-864C-83CEF2515165}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1FC3A19B-ADF7-4C1C-8052-02E0BD41272E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1FC3A19B-ADF7-4C1C-8052-02E0BD41272E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1FC3A19B-ADF7-4C1C-8052-02E0BD41272E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1FC3A19B-ADF7-4C1C-8052-02E0BD41272E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
