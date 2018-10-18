@@ -1,8 +1,8 @@
-﻿using DesafioMobWeb.Context;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using Modelo.Cadastros;
+using Persistencia.Context;
 
 namespace DesafioMobWeb.Controllers
 {

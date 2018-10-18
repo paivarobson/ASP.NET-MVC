@@ -151,7 +151,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Context\ContextoDB.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -1205,6 +1204,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Context\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -1221,6 +1221,10 @@
     <ProjectReference Include="..\Modelo\Modelo.csproj">
       <Project>{c8998b94-16aa-464d-8637-66636e9bc3f0}</Project>
       <Name>Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistencia\Persistencia.csproj">
+      <Project>{FF9DBCFB-4D55-4CB1-864C-83CEF2515165}</Project>
+      <Name>Persistencia</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
