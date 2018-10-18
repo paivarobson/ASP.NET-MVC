@@ -10,25 +10,11 @@ namespace DesafioMobWeb.Controllers
     {
         public ContextoDB db = new ContextoDB();
 
-        Cliente insercaoDeDadosCliente = new Cliente
-        {
-            ClienteID = 1,
-            RazaoSocialCliente = "Robson Paiva Consultoria",
-            FantasiaCliente = "Consultoria SystemsPaiva",
-            CnpjCliente = "99.999.999/0001-01",
-            RuaCliente = "Rua",
-            NumeroRuaCliente = 99,
-            ComplementoCliente = "Sem complemento",
-            BairroCliente = "Bairro",
-            MunicipioCliente = "Cidade",
-            CepCliente = "60000-000"
-        };
-
         //Método para retornar View 
         //para entrada de dados de cadastro do Cliente
         public ActionResult Cadastrar()
         {
-            return View(insercaoDeDadosCliente);
+            return View();
         }
 
         //Gravar dados de cadastro do BD
