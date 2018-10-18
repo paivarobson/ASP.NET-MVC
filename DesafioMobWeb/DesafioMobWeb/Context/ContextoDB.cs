@@ -1,9 +1,5 @@
-﻿using DesafioMobWeb.Models;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
+using Modelo.Cadastros;
 
 namespace DesafioMobWeb.Context
 {

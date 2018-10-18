@@ -1,4 +1,4 @@
-﻿namespace DesafioMobWeb.Models
+﻿namespace Modelo.Cadastros
 {
     public class Usuario
     {
