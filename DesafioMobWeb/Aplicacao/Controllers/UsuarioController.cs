@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
-namespace DesafioMobWeb.Controllers
+namespace Aplicacao.Controllers
 {
     public class UsuarioController : Controller
     {

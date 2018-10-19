@@ -4,7 +4,7 @@ using System.Web.Mvc;
 using Modelo.Cadastros;
 using Persistencia.Context;
 
-namespace DesafioMobWeb.Controllers
+namespace Aplicacao.Controllers
 {
     public class ClienteController : Controller
     {

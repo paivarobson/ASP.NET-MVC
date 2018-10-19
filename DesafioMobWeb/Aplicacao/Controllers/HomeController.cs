@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using Modelo.Cadastros;
 
-namespace DesafioMobWeb.Controllers
+namespace Aplicacao.Controllers
 {
     public class HomeController : Controller
     {
