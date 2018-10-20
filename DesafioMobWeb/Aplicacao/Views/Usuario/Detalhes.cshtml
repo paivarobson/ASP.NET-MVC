@@ -1,0 +1,44 @@
+﻿@model Modelo.Cadastros.Usuario
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Dados do Usuário</h2>
+
+<div>
+    <h4>Usuário - @Html.DisplayFor(x => x.NomeUsuario)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(x => x.NomeUsuario)
+        </dt>
+        <dd>
+            @Html.DisplayFor(x => x.NomeUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.ApelidoUsuario)
+        </dt>
+        <dd>
+            @Html.DisplayFor(x => x.ApelidoUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.EmailUsuario)
+        </dt>
+        <dd>
+            @Html.DisplayFor(x => x.EmailUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.TelefoneUsuario)
+        </dt>
+        <dd>
+            @Html.DisplayFor(x => x.TelefoneUsuario)
+        </dd>
+    </dl>
+</div>
+
+@Html.ActionLink("Voltar", "Consultar")
+
