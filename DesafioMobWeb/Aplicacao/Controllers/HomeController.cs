@@ -1,5 +1,8 @@
-﻿using System.Web.Mvc;
-using Modelo.Cadastros;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 
 namespace Aplicacao.Controllers
 {
@@ -19,7 +22,7 @@ namespace Aplicacao.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Minha página de Contato";
+            ViewBag.Message = "Your contact page.";
 
             return View();
         }
