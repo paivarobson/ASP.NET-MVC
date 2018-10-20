@@ -5,15 +5,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Cadastros\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Modelo\Modelo.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Migrations\201810170102164_CriacaoDB.Designer.cs">
+      <DependentUpon>201810170102164_CriacaoDB.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Migrations\201810170102164_CriacaoDB.resx">
+      <DependentUpon>201810170102164_CriacaoDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

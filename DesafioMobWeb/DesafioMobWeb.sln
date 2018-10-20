@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplicacao", "DesafioMobWeb\Aplicacao.csproj", "{7B79EEC9-03F4-4032-B268-1B226E1C5AC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioMobWeb", "DesafioMobWeb\DesafioMobWeb.csproj", "{7B79EEC9-03F4-4032-B268-1B226E1C5AC1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modelo", "Modelo\Modelo.csproj", "{C8998B94-16AA-464D-8637-66636E9BC3F0}"
 EndProject
