@@ -1,14 +1,13 @@
-﻿using Dados.Context;
-using Modelo.Cadastros;
+﻿using Modelo.Cadastros;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
 namespace Aplicacao.Controllers
 {
+    /*
     public class ClienteController : Controller
     {
-        public ContextoDB db = new ContextoDB();
 
         //Método para retornar View 
         //para entrada de dados de cadastro do Cliente
@@ -105,4 +104,5 @@ namespace Aplicacao.Controllers
         }
 
     }
+    */
 }

@@ -1111,13 +1111,13 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dados\Dados.csproj">
-      <Project>{983fe17f-0f94-4661-95d8-e664c9bf5bc1}</Project>
-      <Name>Dados</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
       <Project>{c8998b94-16aa-464d-8637-66636e9bc3f0}</Project>
       <Name>Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Servico\Servico.csproj">
+      <Project>{dc0c6ec1-bf58-46d1-9ddb-9d322873108c}</Project>
+      <Name>Servico</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

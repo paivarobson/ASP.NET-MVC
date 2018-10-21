@@ -1,15 +1,14 @@
-﻿using Dados.Context;
-using Modelo.Cadastros;
+﻿using Modelo.Cadastros;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
+using Servico.Cadastros;
 
 namespace Aplicacao.Controllers
 {
     public class UsuarioController : Controller
     {
-
-        private ContextoDB db = new ContextoDB();
+        private UsuarioServico usuarioServico = new UsuarioServico();
 
         //Método para retornar View 
         //para entrada de dados de cadastro do Usuário
@@ -24,8 +23,7 @@ namespace Aplicacao.Controllers
         {
             try
             {
-                db.Usuarios.Add(usuario);
-                db.SaveChanges();
+                usuarioServico.CadastrarUsuario(usuario);
 
                 return RedirectToAction("Consultar");
             }
@@ -39,23 +37,19 @@ namespace Aplicacao.Controllers
         //Consulta de Usuários cadastrados
         public ActionResult Consultar()
         {
-
-            return View(db.Usuarios.ToList());
+            return View(usuarioServico.ConsultarUsuario());
         }
 
         public ActionResult Detalhes(int id)
         {
-
-            var usuario = db.Usuarios.Find(id);
-
-            return View(usuario);
+            return View(usuarioServico.ConsultarUsuarioPorID(id));
         }
 
         //Retornar dados de Usuários do BD para Edição
         public ActionResult Editar(int id)
         {
 
-            return View(db.Usuarios.Find(id));
+            return View(usuarioServico.ConsultarUsuarioPorID(id));
         }
 
         //Modificar dados de Usuários cadastrados
@@ -66,8 +60,7 @@ namespace Aplicacao.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    db.Entry(usuario).State = EntityState.Modified;
-                    db.SaveChanges();
+                    usuarioServico.EditarUsuario(usuario);
 
                     return RedirectToAction("Consultar");
                 }
@@ -84,7 +77,7 @@ namespace Aplicacao.Controllers
         //Retornar dados de Usuários do BD para Exclusão
         public ActionResult Excluir(int id)
         {
-            return View(db.Usuarios.Find(id));
+            return View(usuarioServico.ConsultarUsuarioPorID(id));
         }
 
         //Excluir registro de Usuário do BD
@@ -95,10 +88,7 @@ namespace Aplicacao.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    usuario = db.Usuarios.Find(id);
-
-                    db.Usuarios.Remove(usuario);
-                    db.SaveChanges();
+                    usuarioServico.ExcluirUsuario(id);
 
                     return RedirectToAction("Consultar");
                 }

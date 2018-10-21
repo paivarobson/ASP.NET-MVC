@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Cadastros\ClienteDAL.cs" />
+    <Compile Include="DAL\Cadastros\UsuarioDAL.cs" />
     <Compile Include="Context\ContextoDB.cs" />
     <Compile Include="Migrations\201810170102164_CriacaoDB.cs" />
     <Compile Include="Migrations\201810170102164_CriacaoDB.Designer.cs">
