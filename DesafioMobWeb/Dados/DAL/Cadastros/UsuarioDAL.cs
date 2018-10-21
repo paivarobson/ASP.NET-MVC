@@ -13,12 +13,13 @@ namespace Dados.DAL.Cadastros
     {
         private ContextoDB db = new ContextoDB();
 
-        //Consulta de Usuários cadastrados
+        //Consulta de Usuários cadastrados por ordem crescente do ID
         public IQueryable<Usuario> ConsultarUsuario()
         {
-            return db.Usuarios.OrderBy(x => x.NomeUsuario);
+            return db.Usuarios.OrderBy(x => x.UsuarioID);
         }
 
+        //Consulta de Usuários cadastrados por ID
         public Usuario ConsultarUsuarioPorID(int id)
         {
             return db.Usuarios.Where(x => x.UsuarioID == id).First();

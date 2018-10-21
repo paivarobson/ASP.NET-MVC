@@ -2,12 +2,13 @@
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
+using Servico.Cadastros;
 
 namespace Aplicacao.Controllers
 {
-    /*
     public class ClienteController : Controller
     {
+        private ClienteServico clienteServico = new ClienteServico();
 
         //Método para retornar View 
         //para entrada de dados de cadastro do Cliente
@@ -18,12 +19,11 @@ namespace Aplicacao.Controllers
 
         //Gravar dados de cadastro do BD
         [HttpPost]
-        public ActionResult Cadastrar(Cliente cli)
+        public ActionResult Cadastrar(Cliente cliente)
         {
             try
             {
-                db.Clientes.Add(cli);
-                db.SaveChanges();
+                clienteServico.CadastrarCliente(cliente);
 
                 return RedirectToAction("Consultar");
             }
@@ -36,19 +36,19 @@ namespace Aplicacao.Controllers
         //Consulta de Clientes cadastrados
         public ActionResult Consultar()
         {
-            return View(db.Clientes.ToList());
+            return View(clienteServico.ConsultarCliente());
         }
 
 
         public ActionResult Detalhes(int id)
         {
-            return View(db.Clientes.Find(id));
+            return View(clienteServico.ConsultarClientePorID(id));
         }
 
         //Retorno da View de edição do Cliente selecionado
         public ActionResult Editar(int id)
         {
-            return View(db.Clientes.Find(id));
+            return View(clienteServico.ConsultarClientePorID(id));
         }
 
         //Modificar dados de Clientes cadastrados
@@ -59,8 +59,7 @@ namespace Aplicacao.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    db.Entry(cliente).State = EntityState.Modified;
-                    db.SaveChanges();
+                    clienteServico.EditarCliente(cliente);
 
                     return RedirectToAction("Consultar");
                 }
@@ -76,7 +75,7 @@ namespace Aplicacao.Controllers
         //Retornar dados de Clientes do BD para Exclusão
         public ActionResult Excluir(int id)
         {
-            return View(db.Clientes.Find(id));
+            return View(clienteServico.ConsultarClientePorID(id));
         }
 
         //Excluir registro de Cliente do BD
@@ -87,10 +86,7 @@ namespace Aplicacao.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    cliente = db.Clientes.Find(id);
-
-                    db.Clientes.Remove(cliente);
-                    db.SaveChanges();
+                    clienteServico.ExcluirCliente(id);
 
                     return RedirectToAction("Consultar");
                 }
@@ -104,5 +100,5 @@ namespace Aplicacao.Controllers
         }
 
     }
-    */
+
 }
