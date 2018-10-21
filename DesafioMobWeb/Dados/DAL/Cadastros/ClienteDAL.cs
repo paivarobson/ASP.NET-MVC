@@ -1,11 +1,7 @@
 ﻿using Dados.Context;
 using Modelo.Cadastros;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dados.DAL.Cadastros
 {

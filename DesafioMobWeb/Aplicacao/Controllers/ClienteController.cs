@@ -1,8 +1,6 @@
 ﻿using Modelo.Cadastros;
-using System.Data.Entity;
-using System.Linq;
-using System.Web.Mvc;
 using Servico.Cadastros;
+using System.Web.Mvc;
 
 namespace Aplicacao.Controllers
 {
