@@ -9,9 +9,10 @@ namespace Aplicacao
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/admin-lte/js").Include(
-             "~/admin-lte/js/app.js",
-             "~/admin-lte/plugins/fastclick/fastclick.js",
-             "~/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"));
+                "~/admin-lte/js/adminlte.min.js",
+                "~/admin-lte/js/app.js",
+                "~/admin-lte/plugins/fastclick/fastclick.js",
+                "~/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
@@ -29,6 +30,8 @@ namespace Aplicacao
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/bootstrap/css/bootstrap.min.css",
+                      "~/admin-lte/css/AdminLTE.min.css",
                       "~/Content/Site.css",
                       "~/admin-lte/css/AdminLTE.css",
                       "~/admin-lte/css/skins/skin-blue.css",
