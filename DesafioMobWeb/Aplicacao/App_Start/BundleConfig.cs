@@ -11,11 +11,14 @@ namespace Aplicacao
             bundles.Add(new ScriptBundle("~/admin-lte/js").Include(
                 "~/admin-lte/js/adminlte.min.js",
                 "~/admin-lte/js/app.js",
+                "~/admin-lte/js/demo.js",
                 "~/admin-lte/plugins/fastclick/fastclick.js",
                 "~/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Content/js/bootstrap.min.js",
+                        "~/Scripts/jquery-{version}.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
