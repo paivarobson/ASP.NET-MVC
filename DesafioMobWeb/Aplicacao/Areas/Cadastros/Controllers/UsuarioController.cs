@@ -2,7 +2,7 @@
 using Servico.Cadastros;
 using System.Web.Mvc;
 
-namespace Aplicacao.Controllers
+namespace Aplicacao.Areas.Cadastros.Controllers
 {
     public class UsuarioController : Controller
     {

@@ -55,12 +55,19 @@
     <Compile Include="Migrations\201810170102164_CriacaoDB.Designer.cs">
       <DependentUpon>201810170102164_CriacaoDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810241650276_AtualizaBD.cs" />
+    <Compile Include="Migrations\201810241650276_AtualizaBD.Designer.cs">
+      <DependentUpon>201810241650276_AtualizaBD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201810170102164_CriacaoDB.resx">
       <DependentUpon>201810170102164_CriacaoDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810241650276_AtualizaBD.resx">
+      <DependentUpon>201810241650276_AtualizaBD.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

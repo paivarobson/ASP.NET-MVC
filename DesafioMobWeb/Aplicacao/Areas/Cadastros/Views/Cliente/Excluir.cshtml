@@ -1,0 +1,86 @@
+﻿@model Modelo.Cadastros.Cliente
+
+@{
+    ViewBag.Title = "Excluir Usuário";
+}
+
+<h2>Excluir</h2>
+
+<div class="dl-horizontal">
+    <h4>Usuário - @Html.DisplayFor(x => x.RazaoSocialCliente)</h4>
+    <hr />
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(x => x.RazaoSocialCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(x => x.RazaoSocialCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.FantasiaCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(x => x.FantasiaCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.CnpjCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(x => x.CnpjCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.RuaCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(x => x.RuaCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.NumeroRuaCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(x => x.NumeroRuaCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.ComplementoCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(x => x.ComplementoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.BairroCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(x => x.BairroCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.MunicipioCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(x => x.MunicipioCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.CepCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(x => x.CepCliente)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-default">
+            @Html.ActionLink("Cancelar", "Consultar")
+        </div>
+    }
+
+</div>
+
